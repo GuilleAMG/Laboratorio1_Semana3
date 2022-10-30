@@ -30,8 +30,8 @@ Esto se debe a que declaramos la dependencia "express" pero no la hemos instalad
 
 <R/ La funcion flecha resultante es:>
 
-                                    app.listen(process.env.PORT, funcion = (port) => {                              
-                                        console.log("El puerto esta corriendo el puerto TCP: " + process.env.PORT) 
-                                    })
+                        app.listen(process.env.PORT, funcion = (port) => {                              
+                            console.log("El puerto esta corriendo el puerto TCP: " + process.env.PORT) 
+                        })
 
 

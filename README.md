@@ -29,9 +29,19 @@ hacer uso de ella.
 
 13. Como tarea convierte esta función normal en una función de tipo flecha.Una expresión de función flecha es una alternativa compacta a una expresión de función tradicional. Es una prácticamoderna, te doy una pauta de cómodebe ser:    () => { ESCRIBIR AQUÍ INSTRUCCIONES EN CODIGO }
 
+<<<<<<< HEAD
 <R/ La funcion flecha resultante es:>
                                     app.listen(process.env,PORT, () =>
                                         console.log("El puerto esta corriendo el puerto TCP" + process.env.PORT))
+=======
+13. Como tarea convierte esta función normal en una función de tipo flecha.Una expresión de función flecha es una alternativa compacta a una expresión de función tradicional. Es una prácticamoderna, te doy una pauta de cómodebe ser: () => { ESCRIBIR AQUÍ INSTRUCCIONES EN CODIGO }
+
+<R/ La funcion flecha resultante es:>
+
+                        app.listen(process.env.PORT, funcion = (port) => {                              
+                            console.log("El puerto esta corriendo el puerto TCP: " + process.env.PORT) 
+                        })
+>>>>>>> 2c21a563e227953220f3becdb6d5f057ded6be41
 
 17. Tenemos una versión estable de un servidor HTTP por lo tanto vamos a realizar nuestro primer commit en Git de nuestra aplicación, ejecutar los siguientes comanos:
                     

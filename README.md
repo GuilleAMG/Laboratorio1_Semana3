@@ -14,7 +14,7 @@ Instrucciones:
 
 Cuestionario:
 
-8. Si intentamos ejecutar nuestra aplicación utilizando “node app.js”, cual es el mensaje de error que nos devuelve, explicarporque sucede.
+8. Si intentamos ejecutar nuestra aplicación utilizando “node app.js”, cual es el mensaje de error que nos devuelve, explicar porque sucede.
 
 <R/ Aparece el error:>
 

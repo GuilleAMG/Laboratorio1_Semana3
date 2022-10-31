@@ -10,7 +10,7 @@ const router = Router();
 
 router.get('/', Getprecios)
 router.app.post('/', Postprecios)
-router.app.put('/', Putprecios)
-router.app.delete('/', Deleteprecios)
+router.app.put('/id', Putprecios)
+router.app.delete('/id', Deleteprecios)
 
 module.exports = router

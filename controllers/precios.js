@@ -1,16 +1,46 @@
 const {request, response} = require('expres')
+const {ListadoPrecios} = require('../models/precios');
+const {guardarDB, leerDB} = require('../helpers/gestorDB')
 
-const Getprecios = (req = request, res = response) => 
-    res.send('GET EndPoint para Precios')
+const Getprecios = (req = request, res = response) => {
+    let lista = new ListadoPrecios()
+    let datosJSON = leerDB('precios');
+    lista.cargarTareasFromArray(datosJSON)
+    res.json(lista.listadoArr)
+}
 
-const Postprecios = (req = request, res = response) => 
-    res.send('POST EndPoint para Precios')
+const Postprecios = (req = request, res = response) => {
+    let lista = new ListadoPrecios()
+    let datosJSON = leerDB('precios');
+    lista.cargarTareasFromArray(datosJSON)
+    lista.crearPrecios(req.body)
+    guardarDB(lista.listadoArr, 'precios')
+    res.send('Registro Creado')
+}
 
-const Putprecios = (req = request, res = response) => 
-    res.send('PUT EndPoint para Precios')
+const Putprecios = (req = request, res = response) => {
+    let lista = new ListadoPrecios()
+    let datosJSON = leerDB('precios');
+    lista.cargarTareasFromArray(datosJSON)
 
-const Deleteprecios = (req = request, res = response) => 
-    res.send('DELETE EndPoint para Precios')
+    const datos = lista.listadoArr.map(p =>
+        p.id == req.params.id ? {
+            "id":p.id,...req.body
+        } : p
+    );
+    guardarDB(datos, 'precios')
+    res.send('Registro Actualizado')
+}
+
+const Deleteprecios = (req = request, res = response) => {
+    let lista = new ListadoPrecios()
+    let datosJSON = leerDB('precios');
+    lista.cargarTareasFromArray(datosJSON)
+
+    let data = lista.listadoArr.filter(item => item.id !== req.params.id)
+    guardarDB(data, 'precios')
+    res.send('Registro Eliminado')
+}
 
 module.exports ={
     Getprecios,

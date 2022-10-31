@@ -10,7 +10,7 @@ const router = Router();
 
 router.get('/', Getseguimiento)
 router.app.post('/', Postseguimiento)
-router.app.put('/', Putseguimiento)
-router.app.delete('/', Deleteseguimiento)
+router.app.put('/id', Putseguimiento)
+router.app.delete('/id', Deleteseguimiento)
 
 module.exports = router

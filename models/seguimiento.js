@@ -1,13 +1,15 @@
+const {v4:uuidv4} = require('uuid');
+
 class Seguimiento{
     constructor(idEnvio, fecha, hora, lugar){
-        this.idEnvio = idEnvio,
+        this.idEnvio = uuidv4,
         this.fecha = fecha,
         this.hora = hora,
         this.lugar = lugar
     }
 }
 
-class ListadoDetalleEnvios{
+class ListadoSeguimiento{
     constructor(){
         this._listado = {};
     }
@@ -18,7 +20,25 @@ class ListadoDetalleEnvios{
             const tarea = this._listado[key];
             listado.push(tarea);
         });
-
         return listado;
     }
+
+    cargarTareasFromArray(datos = []){
+        datos.forEach(seguimiento => {
+            this._listado[seguimiento.id] =seguimiento;
+        });
+    }
+
+    crearEnvio(datos){
+        const seguimiento = new Seguimiento(
+            datos.idEnvio,
+            datos.fecha,
+            datos.hora,
+            datos,lugar);
+            this._listado[seguimiento.id] = seguimiento;
+    }
+}
+
+module.exports = {
+    ListadoSeguimiento
 }

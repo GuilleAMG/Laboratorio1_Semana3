@@ -10,7 +10,7 @@ const router = Router();
 
 router.get('/', Getenvio)
 router.app.post('/', Postenvio)
-router.app.put('/', Putenvio)
-router.app.delete('/', Deleteenvio)
+router.app.put('/:id', Putenvio)
+router.app.delete('/:id', Deleteenvio)
 
 module.exports = router

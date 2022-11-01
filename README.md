@@ -11,10 +11,6 @@
 3. Ejecutar proyecto:
             `Npm start`
 
-#### Diagrama de Clases
-
-!["Diagrama de Clases"](https://app.genmymodel.com/api/projects/_9ZJmEFgAEe2ck8ytUMEi6A/diagrams/_9ZJmE1gAEe2ck8ytUMEi6A/svg)
-
 Cuestionario:
 
 8. Si intentamos ejecutar nuestra aplicación utilizando “node app.js”, cual es el mensaje de error que nos devuelve, explicar porque sucede.
@@ -78,3 +74,7 @@ hacer uso de ella.
 
 <R/ Los "módulos" en JavaScript, se utilizan para poder exportar funciones o grupos de funciones así como objetos, constantes y variables de un archivo .js otro. De modo que deberás usar la palabra reservada "exports" para lograrlo; los módulos serán funcionales bajo un ambiente de trabajo del lado del servidor con NodeJS.>
 
+
+#### Diagrama de Clases
+
+!["Diagrama de Clases"](https://app.genmymodel.com/api/projects/_9ZJmEFgAEe2ck8ytUMEi6A/diagrams/_9ZJmE1gAEe2ck8ytUMEi6A/svg)
